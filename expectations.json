@@ -1,0 +1,64 @@
+[
+    {
+        "httpRequest": {
+            "method": "OPTIONS",
+            "path": "/api/login"
+        },
+       
+        "httpResponse": {
+            "statusCode": 200,
+            "headers": [
+                {
+                    "name": "Access-Control-Allow-Origin",
+                    "values": [
+                        "http://127.0.0.1:5500/index.html"
+                    ]
+                },
+                {
+                    "name": "Access-Control-Allow-Methods",
+                    "values": [
+                        "GET, POST, PUT, DELETE, OPTIONS"
+                    ]
+                },
+                {
+                    "name": "Access-Control-Allow-Headers",
+                    "values": [
+                        "Content-Type",
+                        "Authorization"
+                    ]
+                }
+            ]
+        }
+    },
+     {
+        "httpRequest": {
+            "method": "POST",
+            "path": "/api/login",
+            "body": {
+                "type": "JSON",
+                "json": {
+                    "username": "jessica",
+                    "password": "secure123"
+                }
+            }
+        }
+    },
+    {
+        "httpRequest": {
+            "method": "POST",
+            "path": "/api/login"
+        },
+        "httpResponse": {
+            "statusCode": 200,
+            "headers": [
+                {
+                    "name": "Access-Control-Allow-Origin",
+                    "values": [
+                        "http://127.0.0.1:5500"
+                    ]
+                }
+            ],
+            "body": "{\"message\": \"Login successful\"}"
+        }
+    }
+]
